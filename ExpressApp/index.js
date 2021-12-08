@@ -127,7 +127,7 @@ app.get('/showtime', (req, res) =>
  {
     let conn=newConnection();
     conn.connect();
-    conn.query( `select * from AdminstratorTimes `
+    conn.query( `select * from AdminstratorSchedule `
     , (err,rows,fields) => 
     {                
             let content = ''; //empty string 
@@ -178,7 +178,7 @@ app.get('/showschedule', (req, res) =>
     let conn=newConnection(); //creating a new connection object
     conn.connect(); //establishing connection
     let k1,k2,k3,k4,k5,k6,k7,k8,k9; //declaring varibales to 
-    conn.query( `select * from AdminstratorTimes `
+    conn.query( `select * from AdminstratorSchedule `
     , (err,rows,fields) => {                
             for (r of rows){
                 k1 = r.meeting1 
